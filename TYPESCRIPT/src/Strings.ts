@@ -4,6 +4,16 @@ console.log(g);
 let name1:string ='Anirban';
 console.log(`name is ${name1}`)
 
+let StudentName:string='Anirban';
+let StudentDept:string='CSE';
+//before ES6
+let outcome1: string = StudentName + ' Study in the ' + StudentDept + ' Dept';
+console.log(outcome1)
+//After ES6
+let outcome2: string = `${StudentName}  Study in the ${StudentDept} Dept`;
+console.log(outcome2)
+
+
 // charAt()
 let str:string='Hello World';
 console.log(str.charAt(8));
@@ -35,9 +45,9 @@ console.log(str1.replace(/Anirban/gi,'hi'))
 // gi makes it non-case sensitive
 
 // split()
+str1='Apple-Banana-Orange';
 // str1='Apple,Banana,Orange';
 // console.log(str1.split(str2))
-str1='Apple-Banana-Orange';
 // str2=',';
 str2='-';
 str3='p';
@@ -66,6 +76,7 @@ if((stud='Anirban')){
 }
 
 // More Functions
+
 // endswith()
 // include()*
 // lastIndexof()
