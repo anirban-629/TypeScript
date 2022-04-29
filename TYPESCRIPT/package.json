@@ -1,0 +1,17 @@
+{
+  "name": "anirban",
+  "version": "1.0.0",
+  "description": "This is TypeScript tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Anirban Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.3"
+  }
+}
