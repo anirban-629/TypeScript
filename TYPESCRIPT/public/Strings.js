@@ -3,6 +3,14 @@ let g = 'Anirban';
 console.log(g);
 let name1 = 'Anirban';
 console.log(`name is ${name1}`);
+let StudentName = 'Anirban';
+let StudentDept = 'CSE';
+//before ES6
+let outcome1 = StudentName + ' Study in the ' + StudentDept + ' Dept';
+console.log(outcome1);
+//After ES6
+let outcome2 = `${StudentName}  Study in the ${StudentDept} Dept`;
+console.log(outcome2);
 // charAt()
 let str = 'Hello World';
 console.log(str.charAt(8));
@@ -30,9 +38,9 @@ console.log(str1.replace('Anirban', str2));
 console.log(str1.replace(/Anirban/gi, 'hi'));
 // gi makes it non-case sensitive
 // split()
+str1 = 'Apple-Banana-Orange';
 // str1='Apple,Banana,Orange';
 // console.log(str1.split(str2))
-str1 = 'Apple-Banana-Orange';
 // str2=',';
 str2 = '-';
 str3 = 'p';
