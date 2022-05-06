@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let g = 'Anirban';
 console.log(g);
 let name1 = 'Anirban';
@@ -11,6 +12,10 @@ console.log(outcome1);
 //After ES6
 let outcome2 = `${StudentName}  Study in the ${StudentDept} Dept`;
 console.log(outcome2);
+// String Functions(Global Function)
+let color = String('red' + 1);
+console.log(color);
+console.log(typeof (color));
 // charAt()
 let str = 'Hello World';
 console.log(str.charAt(8));
@@ -62,6 +67,15 @@ if ((stud = 'Anirban')) {
     console.log('No');
 }
 // More Functions
+// expressions
+let n1 = 100;
+let n2 = 100;
+console.log(`The addition of ${n1} + ${n2} is ${n1 + n2}`);
+let m = 11;
+console.log(`The m is ${m == 10 ? 'ten' : 'not ten'}`);
+// let n3:string | number | boolean | Date =`${n1+n2}`;
+let n3 = `${n1 + n2}`;
+console.log(`The addition of ${n1} + ${n2} is ${}`);
 // endswith()
 // include()*
 // lastIndexof()

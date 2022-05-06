@@ -1,3 +1,5 @@
+export{}
+
 let g:string ='Anirban';
 console.log(g);
 
@@ -13,6 +15,10 @@ console.log(outcome1)
 let outcome2: string = `${StudentName}  Study in the ${StudentDept} Dept`;
 console.log(outcome2)
 
+// String Functions(Global Function)
+let color:string=String('red'+1);
+console.log(color);
+console.log(typeof(color));
 
 // charAt()
 let str:string='Hello World';
@@ -76,6 +82,18 @@ if((stud='Anirban')){
 }
 
 // More Functions
+
+// expressions
+let n1:number=100;
+let n2:number=100;
+console.log(`The addition of ${n1} + ${n2} is ${n1+n2}`);
+
+let m:number=11;
+console.log(`The m is ${m==10?'ten':'not ten'}`);
+
+// let n3:string | number | boolean | Date =`${n1+n2}`;
+let n3:string | number  =`${n1+n2}`;
+console.log(`The addition of ${n1} + ${n2} is ${}`);
 
 // endswith()
 // include()*
