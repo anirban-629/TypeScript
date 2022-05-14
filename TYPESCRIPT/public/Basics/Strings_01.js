@@ -1,0 +1,240 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+let StudentName = 'Debasish';
+let StudentDept = 'CS';
+//before ES6
+let outcome1 = StudentName + ' Study in the' + StudentDept + 'Dept';
+//After ES6
+let outcome2 = `${StudentName}  Study in the ${StudentDept} Dept`;
+console.log(outcome1);
+console.log(outcome2);
+let message = 'Hello World';
+console.log(message);
+console.log(typeof message);
+//String function
+let color = String('red');
+console.log(color);
+console.log(typeof color);
+let sentence = `Hello, welcome to the world of typescript,
+          the typed super of javascript`;
+console.log(sentence);
+let longString = 'This is an example of long single line of string and it goes out of my editor screen so i need to wrap it';
+let longString1 = 'This is an example of long single line of string ' +
+    'and it goes out of my editor screen ' +
+    'so i need to wrap it';
+console.log(longString1);
+let longString2 = 'This is an example of long single line of string \
+and it goes out of my editor screen \
+so i need to wrap it';
+console.log(longString2);
+//charAt()
+let str = 'Hello TypeScript';
+console.log(str.charAt(0));
+console.log(str.charAt(2));
+console.log('Hello World'.charAt(6));
+//concat()
+let str1 = 'Hello ';
+let str2 = 'TypeScript';
+console.log(str1.concat(str2));
+console.log(str1.concat(' ', str2));
+console.log(str1.concat(' Mr. ', 'Bond'));
+//indexOf()
+let str3 = 'TypeScript';
+console.log(str3.indexOf('T'));
+console.log(str3.indexOf('p'));
+console.log(str3.indexOf('e'));
+// find x from y position str.indexOf('x',y)
+console.log(str3.indexOf('T', 1));
+console.log(str3.indexOf('t', 9));
+console.log(str3.indexOf('t', 10));
+let strValue = 'This is a primitive string. But is has properties & methods';
+let pos = strValue.indexOf('primitive');
+console.log(pos);
+//replace()
+str1 = 'Hello Javascript';
+str2 = 'TypeScript';
+console.log(str1.replace('Java', 'Type'));
+console.log(str1.replace('JavaScript', str2));
+console.log(str1.replace(str1, str2));
+console.log(str1.replace(/Hello/gi, 'Hi'));
+//split()
+str1 = 'Apple, Banana, Orange';
+str2 = ',';
+console.log(str1.split(str2));
+console.log(str1.split(','));
+console.log(str1.split(',', 2));
+console.log(str1.split(',', 1));
+//toUpperCase()
+str = 'Hello Typescript';
+console.log(str.toUpperCase());
+console.log('hello typescript'.toUpperCase());
+//toLowerCase()
+console.log(str.toLowerCase());
+console.log('HELLO TYPESCRIPT'.toLowerCase());
+//Using Expressions
+let ax1 = 1;
+let bx1 = 2;
+console.log(`The addion of ${ax1} + ${bx1} is ${ax1 + bx1}`);
+let m = 11;
+console.log(`The m is ${m == 10 ? 'ten' : 'not ten'}`);
+const MAX = 100;
+function doSomeWork(argument) {
+    if (argument > MAX) {
+        throw new Error(`At most ${MAX} allowed: ${argument} Given!`);
+    }
+}
+doSomeWork(100);
+//Nesting Expressions
+let x = 10;
+let y = 20;
+let varxy = `${x + y}`;
+console.log(`The addion of ${x} + ${y} is ${varxy}`);
+//Escaping in template strings
+console.log('`');
+console.log('$');
+console.log('${');
+console.log('${');
+console.log('${}');
+//Tagged Template
+let msg = 'Hello';
+function hi(strings, name) {
+    return 'Hi';
+}
+console.log(`${msg} world`);
+// There are two types of data 1. '${msg}' 2. 'world'
+// This is called 1.Template string('world') 2.Expression string('${msg}')
+// This is called totally when there is the whole bunch 1.Template string Array 2.Expression string Array
+//////////////////////////////////////////////////////////////
+console.log(hi `${msg}world`);
+//Parameters to Tagged Function
+let firstName = 'Sachin';
+let lastName = 'Tendulkar';
+let topic = 'Typescript';
+function say(strings, firstName, lastName, topic) {
+    let str = strings[0] +
+        firstName +
+        strings[1] +
+        lastName +
+        strings[2] +
+        topic +
+        strings[3];
+    return str;
+}
+console.log(say `Welcome, ${firstName} ${lastName}. Learn ${topic} here`);
+function say1(strings, ...expr) {
+    console.log(strings);
+    console.log(expr);
+    return '';
+}
+console.log(say1 `Welcome, ${firstName} ${lastName}. Learn ${topic} here`);
+////////////
+function say2(strings, ...expr) {
+    let str = '';
+    strings.forEach((string, i) => {
+        str += string + (expr[i] || '');
+    });
+    return str;
+}
+////////////
+console.log(say2 `Welcome, ${firstName} ${lastName}. Learn ${topic} here`);
+//Raw strings
+let filePath = `C:\Development\profile\aboutme.html`;
+console.log(`The file was uploaded from: ${filePath}`);
+////////////
+function tag(strings) {
+    console.log(strings.raw);
+    console.log(strings);
+}
+tag `string text line 1 \n string text line 2`;
+////////////
+//Unary plus (+)
+console.log(+'100');
+console.log(+'100.5175');
+console.log(+'10AA0.5175');
+console.log(+'');
+console.log(+' ');
+// console.log(+null);
+// console.log(+undefined);
+console.log(+Infinity);
+console.log(+true);
+console.log(+false);
+console.log(+'0x22');
+console.log(+'0022');
+console.log(+'0o51');
+console.log(+'3.125e7');
+console.log(+'35 35');
+console.log(+'AB 35');
+//Parseint
+/////////
+console.log(parseInt('100'));
+console.log(parseInt('100.5175'));
+console.log(parseInt('10AA0.5175'));
+console.log(parseInt(''));
+// console.log(parseInt(null));
+// console.log(parseInt(Infinity));
+// console.log(parseInt(true));
+// console.log(parseInt(false));
+console.log(parseInt('0x22'));
+console.log(parseInt('0022'));
+console.log(parseInt('0o51'));
+console.log(parseInt('3.125e7'));
+console.log(parseInt('35 35'));
+console.log(parseInt('AB 35'));
+console.log(parseInt('51'));
+console.log(parseInt('51', 8));
+console.log(parseInt('51', 16));
+console.log(parseInt('051'));
+console.log(parseInt('051', 8));
+console.log(parseInt('051', 16));
+console.log(parseInt('0x51'));
+console.log(parseInt('0x51', 8));
+console.log(parseInt('0x51', 16));
+console.log(parseInt('0o51'));
+console.log(parseInt('0o51', 8));
+console.log(parseInt('0o51', 16));
+/////////
+//Parsefloat
+///////
+console.log(parseFloat('100'));
+console.log(parseFloat('100.5175'));
+console.log(parseFloat('10AA0.5175'));
+console.log(parseFloat(''));
+///////
+// console.log(parseFloat(null));
+// console.log(parseFloat(Infinity));
+// console.log(parseFloat(true));
+// console.log(parseFloat(false));
+console.log(parseFloat('0x22'));
+console.log(parseFloat('0022'));
+console.log(parseFloat('0o51'));
+console.log(parseFloat('3.125e7'));
+console.log(parseFloat('35 35'));
+console.log(parseFloat('AB 35'));
+//Number global function
+console.log(Number('100'));
+console.log(Number('100.5175'));
+console.log(Number('10AA0.5175'));
+console.log(Number(''));
+console.log(Number(' '));
+console.log(Number(null));
+console.log(Number(undefined));
+console.log(Number(Infinity));
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number('0x22'));
+console.log(Number('0022'));
+console.log(Number('0o51'));
+console.log(Number('3.125e7'));
+console.log(Number('35 35'));
+console.log(Number('AB 35'));
+//Check for NaN
+convertToNumber('AB 35');
+convertToNumber('35');
+function convertToNumber(numVal1) {
+    if (isNaN(+numVal1)) {
+        console.log('Number is NaN');
+    }
+    else {
+        console.log(+numVal1);
+    }
+}

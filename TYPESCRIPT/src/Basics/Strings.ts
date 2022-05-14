@@ -93,7 +93,7 @@ console.log(`The m is ${m==10?'ten':'not ten'}`);
 
 // let n3:string | number | boolean | Date =`${n1+n2}`;
 let n3:string | number  =`${n1+n2}`;
-console.log(`The addition of ${n1} + ${n2} is ${}`);
+console.log(`The addition of ${n1} + ${n2} is ${n3}`);
 
 // endswith()
 // include()*
@@ -106,3 +106,14 @@ console.log(`The addition of ${n1} + ${n2} is ${}`);
 // trimleft()
 // trimRight()
 // valueOf()
+
+
+function f1(strings:TemplateStringsArray, ...expressions:string[]){
+    console.log(strings);
+    console.log(expressions);
+}
+
+let v1='anirban';
+let v2='Mishra';
+
+console.log(f1`Hi I am Anirban Mishra ${v1} ${v2}`);
