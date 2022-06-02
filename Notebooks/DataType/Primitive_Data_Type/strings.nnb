@@ -1,0 +1,451 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let fname:string='Anirban';\r\nlet sname:string='Mishra';\r\nconsole.log(`First Name : ${fname}\\nLast Name: ${sname}`);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "First Name : Anirban",
+                                "Last Name: Mishra",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str=String('Anirban');\r\nconsole.log(typeof(str));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "string",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// let longString2 =\r\n//   'This is an example of long single line of string \\\r\n// and it goes out of my editor screen \\\r\n// so i need to wrap it';\r\n// console.log(longString2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    str.charAt(0),\r\n    str.charAt(1),\r\n    str.charAt(2),\r\n    str.charAt(3),\r\n    str.charAt(4),\r\n    str.charAt(5),\r\n    str.charAt(6)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "A n i r b a n",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str1:string='Anirban ';\r\nlet str2:string='Mishra';\r\nconsole.log(str1.concat(str2));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Anirban Mishra",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(str1.concat(' ',str2));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Anirban  Mishra",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str3:string='ANIRBAN';\r\nconsole.log(\r\n    str3.indexOf('A'),\r\n    str3.indexOf('N'),\r\n    str3.indexOf('I'),\r\n    str3.indexOf('R'),\r\n    str3.indexOf('B'),\r\n    str3.indexOf('A'),\r\n    str3.indexOf('N')\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0 1 2 3 4 0 1",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    str3.indexOf('A', 3),\r\n    str3.indexOf('N', 3)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "5 6",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str4:string='ABCD';\r\nlet str5:string='ijkl';\r\nlet str6:string='EFGH';\r\nconsole.log(str4.concat(str5));\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "ABCDijkl",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(str4.replace('ijkl',str6));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "ABCD",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// console.log(str1.replace('Java', 'Type'));\r\n// console.log(str1.replace('JavaScript', str2));\r\n// console.log(str1.replace(/Hello/gi, 'Hi'));\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str7='A,B,C,D';\r\nconsole.log(str7.split(','));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'A', 'B', 'C', 'D' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(str7.split(',',1));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'A' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let str8:string='AbCdEfGh';\r\nconsole.log(str8.toUpperCase(),str8.toLowerCase());"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "ABCDEFGH abcdefgh",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let n1:number=10;\r\nconsole.log(n1==10?'True':'False', n1>10?'True':'False');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "True False",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a=10;\r\nlet b=10;\r\nlet add=`${a+b}`;\r\nconsole.log(add);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "20",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function hi(strings:TemplateStringsArray, ...name:string[]){\r\n    console.log('TemplateStringsArray: ',strings);\r\n    console.log('name :',name);\r\n}\r\n\r\nlet str9:string= 'Hi';\r\nlet str10:string= 'how';\r\n\r\nhi`${str9} Anirban ${str10} are you`;\r\n// Doubt"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "TemplateStringsArray:  [ '', ' Anirban ', ' are you' ]",
+                                "name : [ 'Hi', 'how' ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let filePath: string = `C:\\Development\\\\profile\\aboutme.html`;\r\n// let filePath: string = `C:\\\\Development\\\\profile\\aboutme.html`;\r\nconsole.log(`uploaded from: ${filePath}`);\r\n\r\nfunction tag(strings: TemplateStringsArray) {\r\n  console.log(strings.raw);\r\n  console.log(strings);\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "uploaded from: C:Development\\profileaboutme.html",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "###### unaryplus,parseInt,parseFloat"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "convertToNumber('AB 35');\r\n\r\nfunction convertToNumber(numVal1: string) {\r\n  if (isNaN(+numVal1)) {\r\n    console.log('Number is NaN');\r\n  } else {\r\n    console.log(+numVal1);\r\n  }\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Number is NaN",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "convertToNumber('35');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "35",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// let str12:string[]=['a','b','c','d'];\r\n// // console.log(str12);\r\n// str12.forEach(function(aad)){\r\n//     console.log(aad);\r\n// }"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 *.txt
 Assignments/
-Practices/
+# Practices/
 *note.txt
 *Course.txt
 node_modules/

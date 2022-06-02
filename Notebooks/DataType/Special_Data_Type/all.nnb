@@ -1,0 +1,850 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "# any"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// any\r\nlet somethhing:any='Hello World';\r\nsomethhing=true;\r\nsomethhing=10;\r\nsomethhing={};\r\nconsole.log(somethhing,typeof somethhing);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{} object",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Any type Array\r\nlet somethhing1:any[]=['Anirban',100,true];\r\nsomethhing1.push(undefined);\r\nconsole.log(somethhing1);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'Anirban', 100, true, undefined ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// never\r\nfunction sayHi(): void{\r\n    console.log('HI');\r\n    // return 'AB';\r\n}\r\nlet speech:void=sayHi();\r\n// console.log(speech);\r\n// console.log(speech);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "HI",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Doubt\r\n\r\nlet x = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // //arrow function\r\n  \r\n  let y = (message: any): never => {\r\n    throw new message();\r\n  };\r\n  \r\n  let x1 = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // // f a function has its return type annotated with never.\r\n  // //All of its return statements (if any) must return never\r\n  // //The endpoint of the function must not be reachable.\r\n  \r\n  // function x1(message): never {\r\n  //   return message;\r\n  // }\r\n  \r\n  // function x2(message): never {\r\n  //   let y = message;\r\n  // }\r\n  \r\n  //Void Vs Never\r\n  //We use void when the function does return but does not return a value. The typescript infers the return value as void.\r\n  //We use void when the function does return but does not return a value.\r\n  \r\n  let z: void = (a: number, b: number): void => {\r\n    let c = a + b;\r\n  };\r\n  \r\n  //The never return type when the function does not return at all.\r\n  \r\n  z = function infiniteLoop() {\r\n    while (true) {}\r\n};\r\n  "
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[36m[Function: infiniteLoop]\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let xyz = function (message: any): never {\r\n    throw new message();\r\n  };\r\n//   console.log(xyz(\"Helllo this is new error\"));\r\nxyz(\"Hello this is new error\");"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "TypeError",
+                                "message": "message is not a constructor",
+                                "stack": "    at xyz (<Cell 6> [2, 10])\n    at <Cell 6> [5, 3]\n    at <Cell 6> [7, 46]\n    at Script.runInContext (node:vm:139:12)\n    at Script.runInNewContext (node:vm:144:17)\n    at Object.runInNewContext (node:vm:298:38)\n    at C (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:113345)\n    at t.execCode (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:114312)\n    at k.<anonymous> (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:142156)\n    at k.emit (node:events:526:28)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# null"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// null\r\nlet a=null;\r\nconsole.log(a,typeof a);  "
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "null object",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function person(name: string, dateOfMarriage: Date | null) {\r\n    return {\r\n      name: name,\r\n      dateOfMarriage: dateOfMarriage,\r\n    };\r\n  }\r\n//   console.log(person('Anirban',null));\r\n  // console.log(person('Anirban',Date('2019-01-16'));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let nullVariable:null;\r\nconsole.log(nullVariable);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "nullVariable=null;\r\nconsole.log(nullVariable);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "null",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\r\n\r\nnullVariable=undefined;\r\nconsole.log(nullVariable);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "nullVariable=10;\r\nnullVariable={};\r\n// it'll throw error as it's assigned as null\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "{}"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "undefVar = null; //Type 'null' is not assignable to type 'undefined'.\r\nnumVar = null; //Type 'null' is not assignable to type 'number'."
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[1mnull\u001b[22m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let v: number|null|undefined;\r\nv=null;\r\nconsole.log(typeof v);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "object",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    v==null,\r\n    v===null,\r\n    null==undefined,\r\n    null===undefined;\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true true true false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let v1;\r\n// console.log(v1==undefined);\r\nconsole.log(v1==null);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let v2=null;\r\nif(v2){\r\n    console.log('True');\r\n}\r\nif(!v2){\r\n    console.log('False');\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "False",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    v2==false,\r\n    v2==true,\r\n    v2===false,\r\n    v2===true\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false false false false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// // Doubt\r\n\r\n// interface Employee {\r\n//     employeecode: number;\r\n//     name: string;\r\n//   }\r\n  \r\n//   let e1: Employee = {\r\n//     employeecode: 10,\r\n//     name: null,\r\n//   };\r\n  \r\n//   let e2: Employee = {\r\n//     employeecode: 10,\r\n//     name: undefined,\r\n//   };\r\n  \r\n//   let e3: Employee = null;\r\n  \r\n//   interface Employee1 {\r\n//     employeecode: number;\r\n//     name: string | null | undefined;\r\n//   }\r\n  \r\n//   let e4: Employee1 = {\r\n//     employeecode: 10,\r\n//     name: null,\r\n//   };\r\n  \r\n//   let e5: Employee1 = {\r\n//     employeecode: 10,\r\n//     name: undefined,\r\n//   };\r\n  \r\n//   let e6: Employee | null | undefined = null;\r\n  \r\n//   //Marking Property & Parameter Optional\r\n//   //?  ->null coullesing  operator\r\n//   interface Employee2 {\r\n//     employeecode: number;\r\n//     name?: string;\r\n//   }\r\n  \r\n//   let e7: Employee = {\r\n//     employeecode: 10,\r\n//     name: undefined, //ok\r\n//   };\r\n  \r\n//   let e8: Employee = {\r\n//     employeecode: 10,\r\n//     name: null, //Type 'null' is not assignable to type 'string | undefined'.ts(2322)\r\n//   };\r\n  \r\n//   function getLength(s: string | null) {\r\n//     if (s === null) {\r\n//       return 0;\r\n//     }\r\n//     return s.length;\r\n//   }\r\n  \r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# undefined"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let NumVar: number;\r\nconsole.log(NumVar);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function foo1(x?: string) {\r\n    console.log(x);\r\n}\r\nfoo1();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function foo2(x: undefined) {\r\n    console.log(x);\r\n}\r\nfoo2();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "const cars:string[]=['Saab','Volvo','BMW'];\r\n// cars.push('TATA')\r\nconsole.log(cars[3]);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num:undefined;\r\nconsole.log(num,typeof num);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    undefined,\r\n    typeof undefined\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Doubt What is globalThis\r\nconsole.log(globalThis.undefined,typeof globalThis.undefined);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//Checking for undefined\r\nlet a8: undefined;\r\nconsole.log(a8 === undefined); //true"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//Null & Undefined\r\nlet a9: undefined;\r\n\r\n// Doubt that how it is true typeof a9 === 'undefined' and then why it isn't true\r\n\r\nconsole.log(typeof a9,typeof a9 === 'undefined');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a10: undefined;\r\nconsole.log('a10:', a10)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "a10: undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(undefined=='undefined');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "\r\nconsole.log(\r\n    // loose equality check\r\n    a10 == false,\r\n    a10 == true ,\r\n    //Strict equality check\r\n    a10 === false ,\r\n    a10 === true\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false false false false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a11 = 10;\r\nlet b11;\r\nconsole.log(\r\n    a11 + b11,\r\n    Number(b11)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "NaN NaN",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Unknown"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Full of Doubts\r\n\r\nlet unknownVar: unknown;\r\n\r\nunknownVar = true;\r\nunknownVar = 10; \r\nunknownVar = 10n;\r\nunknownVar = 'Hello World'; \r\nunknownVar = ['1', '2', '3', '4']; \r\nunknownVar = { firstName: '', lastName: '' }; \r\nunknownVar = null; \r\nunknownVar = undefined; \r\nunknownVar = Symbol('key'); \r\n\r\n// doubt What is symbol\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32mSymbol(key)\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let value: unknown=6;\r\n\r\nlet valuex: unknown = value; // OK\r\nlet valuey: any = value; // OK\r\n\r\nlet value1: boolean = value as boolean; // Error\r\n// let value1: boolean = value ; // Error\r\nlet value2: number = value as number; // Error\r\n// let value2: number = value ; // Error\r\nlet value3: string = value; // Error\r\nlet value4: object = value; // Error\r\nlet value5: any[] = value; // Error\r\nlet value6: Function = value; // Error\r\n\r\nvalue1: boolean = value as boolean; // OK\r\nvalue2: number = value as number; // OK\r\nvalue3: string = value as string; // OK\r\nvalue4: object = value as object; // OK\r\nvalue5: any[] = value as any; // OK\r\nvalue6: Function = value as Function; // OK\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, \nundefined\n            ^\n\nUnexpected token 'v'",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let valueab: unknown;\r\n \r\nlet value11: boolean = valueab as boolean;   // OK\r\nlet value22: number = valueab as number;     // OK\r\nlet value33: string = valueab as string;     // OK\r\nlet value44: object = valueab as object;     // OK\r\nlet value55: any[] = valueab as any;         // OK\r\nlet value66: Function = valueab as Function; // OK\r\n\r\n// console.log(\r\n//     typeof value1,\r\n//     typeof value2,\r\n//     typeof value3,\r\n//     typeof value4,\r\n//     typeof value5,\r\n// );"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined undefined undefined undefined undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let value: unknown;\r\n \r\nif (typeof value ==\"boolean\") {\r\n    let value1: boolean = value;   // OK\r\n}\r\nif (typeof value ==\"number\") {\r\n    let value1: number = value;   // OK\r\n}\r\nif (typeof value ==\"string\") {\r\n    let value1: string = value;   // OK\r\n}"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Void"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a1:void;\r\na1=undefined;\r\nconsole.log(typeof a1);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "undefined",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "a1: void;\r\na1='test';\r\na1: undefined;\r\nlet a2:void;\r\na2=a1;\r\na1=a2;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, \na1: undefined;\r\n         ^\n\nUnexpected token '1'",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//If a function type specifies return type void when implemented, can return any other value, but it will be ignored. The behavior is useful for advanced callback patterns(Web Recursion)\r\ntype voidFunc = () => void;      \r\n \r\nconst f1: voidFunc = () => {\r\n  return 10;\r\n};\r\nconst f2: voidFunc = () => true;\r\nconst f3: voidFunc = function () {\r\n  return \"Hello\";\r\n};\r\n//v1, v2 & v3 are of type void\r\nconst v1 = f1();       \r\nconst v2 = f2();\r\nconst v3 = f3();\r\nconsole.log(\r\n    v1,     \r\n    v2,     \r\n    v3  \r\n);   "
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "10 true Hello",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Doubt\r\n\r\n//Since v1,v2 & v3 are voids you cannot use them\r\nv1+10;   //not ok   \r\n//Operator '+' cannot be applied to types 'void' and 'number'\r\n(v1 as number)+10   //not ok    \r\n \r\n//Conversion of type 'void' to type 'number' may be a mistake \r\n//because neither type sufficiently overlaps with the other. \r\n//If this was intentional, convert the expression to 'unknown' first.\r\n\r\n \r\ntype voidFunc1 = () => undefined;      \r\n\r\n \r\nconst f1: voidFunc1 = () => {\r\n  return 10;\r\n};\r\nfunction log(x: number | string | boolean | void): string | number {\r\n  console.log(x);\r\n  return 5;\r\n}\r\n\r\nlog(5);\r\nlog('Sahoo');\r\nlog(true);\r\nlog(undefined);\r\n\r\n//public static void main() this main function return nothing\r\n\r\nlet useless: void = undefined;\r\n\r\n//useless = 1;\r\n\r\nconsole.log('useless:', useless);\r\n\r\n\r\n// Doubt\r\n\r\nlet a: void;\r\nlet b: undefined;\r\na = undefined;\r\na = 'test';\r\n\r\nb = a; //ok\r\n\r\na = b;\r\n"
+            ],
+            "outputs": []
+        }
+    ]
+}

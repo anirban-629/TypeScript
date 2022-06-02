@@ -1,0 +1,60 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "function add(a:string,b:string):string;\r\nfunction add(a:number,b:number):number;\r\nfunction add(a:number,b:number,c:number):number;\r\n\r\nfunction add(a:any,b:any,c?:any):any{\r\n    return a+b;\r\n}\r\n\r\nadd('Hello ', 'Steve');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'Hello Steve'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "add(10,20);\r\n// console.log(typeof add(10,20)); //Number"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "number",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "export{}\r\nlet t:boolean=true;\r\nlet f:boolean=false;\r\nconsole.log(typeof t, typeof f);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "boolean boolean",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(t);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// let t1:number=1;\r\nlet t1:number=0;\r\nlet t2=Boolean(t1);\r\nconsole.log(t2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\nBoolean(''),\r\nBoolean(0),\r\nBoolean(1),\r\nBoolean(0n),\r\nBoolean(1n),\r\nBoolean('words'),\r\nBoolean(null),\r\nBoolean(undefined),\r\nBoolean(Infinity),\r\n// Boolean(new Date()),\r\nBoolean(NaN));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false false true false true true false false true false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let n1=Number(true);\r\nlet n2=Number(false);\r\nconsole.log(n1,n2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1 0",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

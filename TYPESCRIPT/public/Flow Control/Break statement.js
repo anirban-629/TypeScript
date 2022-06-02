@@ -45,6 +45,7 @@ for (i = 0; i < 10; i++) {
             break;
     }
 }
+// Alias (Name for the loops outerloop,innerloop subinnerloop...)
 outerloop: for (i = 0; i < 10; i++) {
     innerloop: for (j = 0; j < 10; j++) {
         if (i == 6)
@@ -74,3 +75,4 @@ blk2: {
     // break blk2;
 }
 console.log(z); //1
+/////////////////////////

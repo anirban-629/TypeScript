@@ -140,13 +140,16 @@ console.log(say2 `Welcome, ${firstName} ${lastName}. Learn ${topic} here`);
 //Raw strings
 let filePath = `C:\Development\profile\aboutme.html`;
 console.log(`The file was uploaded from: ${filePath}`);
+filePath = `C:\\Development\\profile\\aboutme.html`;
+console.log(`${filePath}`);
 ////////////
 function tag(strings) {
+    // Raw string will asume it a normal sign or element and will show it like that..
     console.log(strings.raw);
+    // Without Raw string it will be asumed as a excape sequence and will be printed in a new line.
     console.log(strings);
 }
 tag `string text line 1 \n string text line 2`;
-////////////
 //Unary plus (+)
 console.log(+'100');
 console.log(+'100.5175');
@@ -165,7 +168,6 @@ console.log(+'3.125e7');
 console.log(+'35 35');
 console.log(+'AB 35');
 //Parseint
-/////////
 console.log(parseInt('100'));
 console.log(parseInt('100.5175'));
 console.log(parseInt('10AA0.5175'));
@@ -180,6 +182,7 @@ console.log(parseInt('0o51'));
 console.log(parseInt('3.125e7'));
 console.log(parseInt('35 35'));
 console.log(parseInt('AB 35'));
+// It's in either octal or hexa then it's converted into decimal
 console.log(parseInt('51'));
 console.log(parseInt('51', 8));
 console.log(parseInt('51', 16));
@@ -192,7 +195,6 @@ console.log(parseInt('0x51', 16));
 console.log(parseInt('0o51'));
 console.log(parseInt('0o51', 8));
 console.log(parseInt('0o51', 16));
-/////////
 //Parsefloat
 ///////
 console.log(parseFloat('100'));

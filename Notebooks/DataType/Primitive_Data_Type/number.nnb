@@ -1,0 +1,513 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let num1:number=100;\r\nlet num2:number=0x37cf;\r\nlet num3:number=0o337;\r\nconsole.log(num1,num2,num3);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "100 14287 223",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let numobj=new Number(1500);\r\nconsole.log(numobj,typeof numobj);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[Number: 1500] object",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num4:number=123456\r\nconsole.log(\r\n    num4.toExponential(),\r\n    num4.toExponential(1),\r\n    num4.toExponential(2),\r\n    num4.toExponential(3),\r\n    num4.toExponential(4)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1.23456e+5 1.2e+5 1.23e+5 1.235e+5 1.2346e+5",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num5:number=1234.3456\r\nconsole.log(\r\n    num5.toFixed(),\r\n    num5.toFixed(1),\r\n    num5.toFixed(2),\r\n    num5.toFixed(3),\r\n    num5.toFixed(4)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "12 12.3 12.35 12.346 12.3456",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    num5.toPrecision(),\r\n    num5.toPrecision(1),\r\n    num5.toPrecision(2),\r\n    num5.toPrecision(3),\r\n    num5.toPrecision(4)\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "12.3456 1e+1 12 12.3 12.35",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num6:number=12.3456\r\nconsole.log(\r\n    num6.toLocaleString()\r\n    ,num6.toLocaleString('bn-IN')\r\n    ,num6.toLocaleString('en-IN')\r\n    ,num6.toLocaleString('hi-IN')\r\n    ,num6.toLocaleString('ta-IN')\r\n    ,num6.toLocaleString('de-DE')\r\n    ,num6.toLocaleString('ar-EG')\r\n    ,num6.toLocaleString('ko-KR')\r\n    ,num6.toLocaleString('ja-JP-u-ca-japanese')\r\n    ,num6.toLocaleString('en-US')\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "12.346 ১২.৩৪৬ 12.346 12.346 12.346 12,346 ١٢٫٣٤٦ 12.346 12.346 12.346",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num7:number=100;\r\nconsole.log(num7.valueOf());"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "100",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number('ABCD'),0/0,10/0);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "NaN NaN Infinity",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let num8:number=1234567890;\r\nconsole.log(Number.MAX_SAFE_INTEGER);\r\nconsole.log(Number.MIN_SAFE_INTEGER);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "9007199254740991",
+                                "-9007199254740991",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.MAX_SAFE_INTEGER+1,\r\nNumber.MAX_SAFE_INTEGER+2,\r\nNumber.MAX_SAFE_INTEGER+3,\r\nNumber.MAX_SAFE_INTEGER+4\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "9007199254740992 9007199254740992 9007199254740994 9007199254740996",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.MIN_SAFE_INTEGER-1,\r\n    Number.MIN_SAFE_INTEGER-2,\r\n    Number.MIN_SAFE_INTEGER-3,\r\n    Number.MIN_SAFE_INTEGER-4\r\n    );"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "-9007199254740992 -9007199254740992 -9007199254740994 -9007199254740996",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER));\r\nconsole.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER+1));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.MAX_VALUE,Number.MIN_VALUE);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1.7976931348623157e+308 5e-324",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.MAX_VALUE+100==Number.MAX_VALUE);\r\n// Doubt"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.EPSILON);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "2.220446049250313e-16",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(0.1+0.2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0.30000000000000004",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(0.1+0.2 ==0.30000000000000004,0.1+0.2==0.30000000000000004);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Math.abs(0.1+0.2)<Number.EPSILON);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(typeof Infinity);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "number",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Math.log(2),Math.pow(10,10));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0.6931471805599453 10000000000",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Number.MAX_VALUE + 10 ** 1000);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Infinity",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Infinity/Infinity);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "NaN",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(Infinity>1000);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    Number.POSITIVE_INFINITY,\r\n    Number.NEGATIVE_INFINITY\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Infinity -Infinity",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log(\r\n    Number.isFinite(Number.POSITIVE_INFINITY),\r\n    Number.isFinite(100),\r\n    Number.isFinite('100')\r\n);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "false true false",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

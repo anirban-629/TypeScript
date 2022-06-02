@@ -81,6 +81,7 @@ console.log(!true); // false
 console.log(!0); // true
 
 ///////////
+
 console.log(!'a'); //false
 console.log(!!'a'); //true
 ///////////
@@ -104,3 +105,4 @@ console.log(false || false);
 
 console.log(true || (false && false));
 console.log((true || false) && false);
+

@@ -1,0 +1,79 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let sum=(x:number,y:number) =>{\r\n    return x+y;\r\n}\r\nconsole.log(sum(10,20));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "30",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "class employee{\r\n    empname:string;\r\n    empcode:number;\r\n    constructor(name:string,code:number) {\r\n        this.empname=name;\r\n        this.empcode=code;\r\n    }\r\n    display= () => console.log(`Code: ${this.empcode}\\nName: ${this.empname}`);\r\n}\r\nlet emp=new employee('Anirban',100);\r\nemp.display();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Code: 100",
+                                "Name: Anirban",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a:number=10;\r\nlet b:number=10;\r\n// let sum1=(a:number,b:number) =>console.log(a+b);\r\nlet sum1=(a:number,b:number) :number => a+b;\r\nconsole.log(sum1(a,b));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "20",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
