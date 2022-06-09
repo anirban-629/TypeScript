@@ -1,0 +1,31 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let z = 0;\r\nblk1: {\r\n  console.log(z);\r\n  break blk2;\r\n}\r\nblk2: {\r\n  console.log(z);\r\n}\r\nconsole.log(z); //1"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "Error",
+                                "message": "Failed to generate code object, \nblk2: {\r\n    ^\n\nUnsyntactic break",
+                                "stack": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

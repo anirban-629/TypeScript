@@ -68,9 +68,16 @@
             ]
         },
         {
+            "language": "markdown",
+            "source": [
+                "# NEVER"
+            ],
+            "outputs": []
+        },
+        {
             "language": "typescript",
             "source": [
-                "// Doubt\r\n\r\nlet x = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // //arrow function\r\n  \r\n  let y = (message: any): never => {\r\n    throw new message();\r\n  };\r\n  \r\n  let x1 = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // // f a function has its return type annotated with never.\r\n  // //All of its return statements (if any) must return never\r\n  // //The endpoint of the function must not be reachable.\r\n  \r\n  // function x1(message): never {\r\n  //   return message;\r\n  // }\r\n  \r\n  // function x2(message): never {\r\n  //   let y = message;\r\n  // }\r\n  \r\n  //Void Vs Never\r\n  //We use void when the function does return but does not return a value. The typescript infers the return value as void.\r\n  //We use void when the function does return but does not return a value.\r\n  \r\n  let z: void = (a: number, b: number): void => {\r\n    let c = a + b;\r\n  };\r\n  \r\n  //The never return type when the function does not return at all.\r\n  \r\n  z = function infiniteLoop() {\r\n    while (true) {}\r\n};\r\n  "
+                "// Doubt NEVER\r\n\r\nlet x = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // //arrow function\r\n  \r\n  let y = (message: any): never => {\r\n    throw new message();\r\n  };\r\n  \r\n  let x1 = function (message: any): never {\r\n    throw new message();\r\n  };\r\n  \r\n  // // f a function has its return type annotated with never.\r\n  // //All of its return statements (if any) must return never\r\n  // //The endpoint of the function must not be reachable.\r\n  \r\n  // function x1(message): never {\r\n  //   return message;\r\n  // }\r\n  \r\n  // function x2(message): never {\r\n  //   let y = message;\r\n  // }\r\n  \r\n  //Void Vs Never\r\n  //We use void when the function does return but does not return a value. The typescript infers the return value as void.\r\n  //We use void when the function does return but does not return a value.\r\n  \r\n  let z: void = (a: number, b: number): void => {\r\n    let c = a + b;\r\n  };\r\n  \r\n  //The never return type when the function does not return at all.\r\n  \r\n  z = function infiniteLoop() {\r\n    while (true) {}\r\n};\r\n  "
             ],
             "outputs": [
                 {
@@ -122,6 +129,46 @@
                                 "message": "message is not a constructor",
                                 "stack": "    at xyz (<Cell 6> [2, 10])\n    at <Cell 6> [5, 3]\n    at <Cell 6> [7, 46]\n    at Script.runInContext (node:vm:139:12)\n    at Script.runInNewContext (node:vm:144:17)\n    at Object.runInNewContext (node:vm:298:38)\n    at C (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:113345)\n    at t.execCode (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:114312)\n    at k.<anonymous> (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:142156)\n    at k.emit (node:events:526:28)"
                             }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function SayHi(): void {\r\n    console.log('HI');\r\n  }\r\n  let speech12: void = SayHi();\r\n  "
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "HI",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log('speech:', speech12);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "speech: undefined",
+                                "",
+                                ""
+                            ]
                         }
                     ]
                 }

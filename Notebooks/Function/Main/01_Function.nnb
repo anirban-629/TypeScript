@@ -1,0 +1,132 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "// function display(){\r\nfunction display():void{\r\n    console.log('hello');\r\n}\r\ndisplay();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "hello",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function dosum(x: number, y: number): number {\r\n    return x + y;\r\n  }\r\n  dosum(10,20);\r\n  //dosum('deb', 'sahoo');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m30\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//Anonymous function\r\nlet x = function (a: number, b: number): number {\r\n    return a * b;\r\n  };\r\n  \r\n  x(2, 8);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m16\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//Optional Parameter\r\nlet y = function (a: string, b?: string): string {\r\n    return a + ' ' + b;\r\n  };\r\n//   y('Hello','World');\r\n  y('Hello');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'Hello undefined'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//default parameter\r\nlet z = function (a: string, b: string = 'deb'): string {\r\n    return a + ' ' + b;\r\n  };\r\n  \r\n  console.log('z:', z('Hello'));\r\n  \r\n  console.log('z:', z('Hello', 'sayan'));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "z: Hello deb",
+                                "z: Hello sayan",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

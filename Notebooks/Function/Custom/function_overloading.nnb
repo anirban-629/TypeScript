@@ -32,7 +32,7 @@
         {
             "language": "typescript",
             "source": [
-                "add(10,20);\r\n// console.log(typeof add(10,20)); //Number"
+                "add(10,20);\r\n// console.log(typeof add(10,20)); //Number\r\n\r\n"
             ],
             "outputs": [
                 {
@@ -40,10 +40,21 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "number",
                                 "",
                                 ""
                             ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "add is not defined",
+                                "stack": "    at <Cell 2> [1, 3]\n    at <Cell 2> [4, 46]\n    at Script.runInContext (node:vm:139:12)\n    at Script.runInNewContext (node:vm:144:17)\n    at Object.runInNewContext (node:vm:298:38)\n    at C (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:113345)\n    at t.execCode (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:114312)\n    at k.<anonymous> (c:\\Users\\ANIRBAN MISHRA\\.vscode\\extensions\\donjayamanne.typescript-notebook-2.0.6\\out\\extension\\server\\index.js:2:142156)\n    at k.emit (node:events:526:28)\n    at k.emit (node:domain:475:12)"
+                            }
                         }
                     ]
                 }

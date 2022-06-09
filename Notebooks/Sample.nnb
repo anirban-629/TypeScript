@@ -153,6 +153,102 @@
                     ]
                 }
             ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// console.log(addNum((a++, (a += b), a), (a++, b++))); // 302\r\n\r\n// function addNum(a: number, b: number) {\r\n//     //   return a + b;\r\n//     console.log(a,b);\r\n// }\r\n// let a121=100;\r\n// let b121=100;\r\n// addNum((a121++, (a121 += b121), a121), (a121++, b121++,b121)); \r\n\r\nfunction addasd(a:number,b:number){\r\n    return a+b;\r\n}\r\nlet abc=100;\r\nlet abcd=100;\r\naddasd(abc++,abcd++);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m200\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let email=null\r\nlet sel=email??\"or\"\r\nconsole.log(sel);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "or",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function foo1(x?: string) {\r\n    console.log(x);\r\n}\r\nfoo1('TypeScript');"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "TypeScript",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "console.log('}' > 'a'); "
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
         }
     ]
 }

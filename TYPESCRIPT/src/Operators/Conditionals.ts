@@ -7,6 +7,9 @@ console.log(x < 15); //true
 console.log(x < 10); //false
 console.log(x < 5); //false
 //String Examples
+
+// ASCII VALUE OF FIRST LETTER
+
 let y: string = 'Hello';
 console.log(y < 'I'); //true
 console.log(y < 'Hello'); //false
