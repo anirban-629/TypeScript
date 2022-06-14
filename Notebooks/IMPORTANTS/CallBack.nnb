@@ -1,0 +1,214 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let num:number[]=[1,2,3,4,5,6,7,8,9,10,11,12,13];"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let isOdd=(x:number)=> {\r\n    return x%2;\r\n}\r\nconsole.log(\"Odd Number: \"+num.filter(isOdd));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Odd Number: 1,3,5,7,9,11,13",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let isEven=(x:number)=> {\r\n    return x%2==0;\r\n}\r\nconsole.log(\"Odd Number: \"+num.filter(isEven));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Odd Number: 2,4,6,8,10,12",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let isOddNumber=num.filter((x)=>x%2);\r\nconsole.log(isOddNumber);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "  1,  3,  5, 7,",
+                                "  9, 11, 13",
+                                "]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let isEvenNumber=num.filter((x)=>x%2==0);\r\nconsole.log(isEvenNumber);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 2, 4, 6, 8, 10, 12 ]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let sorted:number[]=num.sort();\r\nconsole.log(sorted);\r\n// ??????"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "  1, 10, 11, 12, 13, 2,",
+                                "  3,  4,  5,  6,  7, 8,",
+                                "  9",
+                                "]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let sorted1:number[]=num.sort((a,b)=>a-b);\r\nconsole.log(sorted1);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "   1, 2, 3,  4,  5,  6,",
+                                "   7, 8, 9, 10, 11, 12,",
+                                "  13",
+                                "]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "setTimeout(() => {\r\n    console.log(\"HELLO\");\r\n}, 5000);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "Timeout {",
+                                "  _idleTimeout: \u001b[33m5000\u001b[39m,",
+                                "  _idlePrev: \u001b[36m[TimersList]\u001b[39m,",
+                                "  _idleNext: \u001b[36m[TimersList]\u001b[39m,",
+                                "  _idleStart: \u001b[33m457\u001b[39m,",
+                                "  _onTimeout: \u001b[36m[Function (anonymous)]\u001b[39m,",
+                                "  _timerArgs: \u001b[90mundefined\u001b[39m,",
+                                "  _repeat: \u001b[1mnull\u001b[22m,",
+                                "  _destroyed: \u001b[33mfalse\u001b[39m,",
+                                "  [\u001b[32mSymbol(refed)\u001b[39m]: \u001b[33mtrue\u001b[39m,",
+                                "  [\u001b[32mSymbol(kHasPrimitive)\u001b[39m]: \u001b[33mfalse\u001b[39m,",
+                                "  [\u001b[32mSymbol(asyncId)\u001b[39m]: \u001b[33m45\u001b[39m,",
+                                "  [\u001b[32mSymbol(triggerId)\u001b[39m]: \u001b[33m14\u001b[39m",
+                                "}"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "HELLO",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

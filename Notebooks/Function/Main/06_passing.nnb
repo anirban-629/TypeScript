@@ -1,0 +1,79 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "export{};\r\nfunction dosum(x:number,y:number):number{return x+y;}\r\nfunction avg(a:number,b:number,c:Function){\r\n    return c(a,b)/2;\r\n}\r\nconsole.log(\"Average of 10 and 20 is: \",avg(10,20,dosum));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Average of 10 and 20 is:  15",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "//x y => x>y +1 , x<y -1, x==y 0\r\nfunction compareBy(propname:any):any{\r\n    return function(a:any,b:any){\r\n        let x=a[propname];\r\n        let y=b[propname];\r\n        \r\n        if(x>y){return 1;}\r\n        else if(x<y){return -1;}\r\n        else{return 0;}\r\n    };\r\n}\r\n\r\nlet product=[\r\n    { name: 'Iphone' , price: 900 },\r\n    { name: 'Samsung', price: 1200 },\r\n    { name: 'Sony'   , price: 700 }\r\n]\r\n\r\nproduct.sort(compareBy('name'));\r\nconsole.log(product);\r\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "  { name: 'Iphone', price: 900 },",
+                                "  { name: 'Samsung', price: 1200 },",
+                                "  { name: 'Sony', price: 700 }",
+                                "]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "product.sort(compareBy('price'));\r\nconsole.log(product);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[",
+                                "  { name: 'Sony', price: 700 },",
+                                "  { name: 'Iphone', price: 900 },",
+                                "  { name: 'Samsung', price: 1200 }",
+                                "]",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

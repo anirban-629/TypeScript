@@ -1,0 +1,24 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "let pow =(a:number,n:number):number=>{\r\n    if(n==0){\r\n        return 1;\r\n    }\r\n    else{\r\n        return a*pow(a,n-1);\r\n    }\r\n};\r\nconsole.log(pow(2,3));"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "8",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

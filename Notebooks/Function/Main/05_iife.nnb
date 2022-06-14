@@ -1,0 +1,89 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "export{};\r\n(function(){\r\n    console.log(\"Hello\")\r\n})();"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "Hello",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let add1=(x:number,y:number):number=>{return x+y};\r\nadd1(10+10,20);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m40\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a;\r\nlet b;\r\nlet add2=((x:number,y:number):number=>{\r\n    return x+y})(a,b);\r\n// a=100;\r\n// b=100;\r\nadd2;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mNaN\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "let a1=100;\r\nlet b1=100;\r\nlet add3=((x:number,y:number):number=>{\r\n    return x+y})(a,b);\r\nadd3;"
+            ],
+            "outputs": []
+        }
+    ]
+}

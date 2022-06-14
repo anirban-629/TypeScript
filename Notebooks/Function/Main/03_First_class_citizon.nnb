@@ -1,0 +1,40 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "export{};\r\nfunction abc(a:number,b:number){\r\n    return a+b;\r\n}\r\nlet x=abc;\r\nx(10,10);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m20\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
